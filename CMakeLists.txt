@@ -1,8 +1,7 @@
 cmake_minimum_required(VERSION 3.0)
-project(ZipImage)
+project(MOPSI)
 find_package(Imagine REQUIRED)
 
-add_subdirectory(quadtree)
 
-ImagineAddExecutable(example example.cpp quadtree/quadtree.h)
-ImagineUseModules(example Graphics)
+ImagineAddExecutable(mopsi main.cpp tree.h gradient.h shortest_path.h)
+ImagineUseModules(mopsi Graphics)
